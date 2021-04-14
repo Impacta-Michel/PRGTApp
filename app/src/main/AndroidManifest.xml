@@ -13,13 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PRGTApp">
-        <activity android:name=".ConfigActivity"/>
+        <activity android:name=".DetalheProjeto"></activity>
+        <activity android:name=".ConfigActivity" />
         <activity android:name=".ProjectActivity" />
         <activity android:name=".CrewActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".TelaInicialActivity" />
+        <activity
+            android:name=".TelaInicialActivity"
+            android:theme="@style/LoginTheme" />
         <activity android:name=".DebugActivity" />
-        <activity android:name=".MainActivity"  android:theme="@style/LoginTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/LoginTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,4 +32,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

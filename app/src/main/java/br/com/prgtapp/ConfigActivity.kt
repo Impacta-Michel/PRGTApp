@@ -21,17 +21,10 @@ class ConfigActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
-        if (id == R.id.action_logout) {
-            Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, MainActivity::class.java))
-        } else if (id == R.id.action_config) {
-            Toast.makeText(this, "Configurações", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, ConfigActivity::class.java))
-        } else if (id == android.R.id.home) {
+        if (id == android.R.id.home) {
             finish()
         }
-
         return super.onOptionsItemSelected(item)
-
     }
+
 }

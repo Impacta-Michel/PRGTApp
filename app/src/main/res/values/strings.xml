@@ -18,4 +18,6 @@
     <string name="hint_password">Digite aqui sua senha</string>
     <string name="register">ESQUECEU SEU LOGING?</string>
     <string name="mensagem_boas_vindas">BEM VINDO(A) À ÁREA DE USUÁRIO</string>
+    <string name="nav_open">Abrir</string>
+    <string name="nav_close">Fechar</string>
 </resources>
