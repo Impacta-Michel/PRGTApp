@@ -15,7 +15,7 @@ class ProjectActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_project)
-        supportActionBar?.title = "Projetos"
+        supportActionBar?.title = "Lista de Projetos"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         recycler_projetos?.layoutManager = LinearLayoutManager(this)
