@@ -19,6 +19,8 @@ import kotlinx.android.synthetic.main.toolbar.*
 class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private val context: Context get() = this
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_inicial)
@@ -34,16 +36,20 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
-        button_projects.setOnClickListener {
-            val intent = Intent(this, ProjectActivity::class.java)
+        button_crew.setOnClickListener {
+            val intent = Intent(this, EquipeActivity::class.java)
             startActivity(intent)
         }
-        button_crew.setOnClickListener {
-            val intent = Intent(this, CrewActivity::class.java)
+
+        button_users.setOnClickListener {
+            val intent = Intent(this, UserActivity::class.java)
             startActivity(intent)
         }
 
         configuraMenuLateral()
+//
+//        val nomeShared = Prefs.getString("nomeusuario")
+//        Toast.makeText(this, "Valor do SaredPreferences: $nomeShared", Toast.LENGTH_LONG).show()
     }
 
     private fun configuraMenuLateral(){

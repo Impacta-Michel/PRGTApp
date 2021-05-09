@@ -26,5 +26,4 @@ class ConfigActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
 }

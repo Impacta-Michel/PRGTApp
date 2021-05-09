@@ -16,8 +16,9 @@
     <string name="action_logout">Logout</string>
     <string name="hint_user">Digite aqui seu usuário</string>
     <string name="hint_password">Digite aqui sua senha</string>
-    <string name="register">ESQUECEU SEU LOGING?</string>
+    <string name="register">NÃO POSSUI LOGIN? REGISTRE-SE!</string>
     <string name="mensagem_boas_vindas">BEM VINDO(A) À ÁREA DE USUÁRIO</string>
     <string name="nav_open">Abrir</string>
     <string name="nav_close">Fechar</string>
+    <string name="mensagem_inicial_projeto">Cadastre o novo projeto</string>
 </resources>

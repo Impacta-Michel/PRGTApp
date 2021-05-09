@@ -12,13 +12,28 @@ class MainActivity : DebugActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
+        campo_usuario.setText(Prefs.getString("nomeusuario"))
+        campo_senha.setText(Prefs.getString("senhausuario"))
+        checkbox.isChecked = Prefs.getBoolean("checkusuario")
+
         register.setOnClickListener {
-            Toast.makeText(this, "Registre-se no site", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, NewUserActivity::class.java)
+            startActivity(intent)
         }
 
         botao_login.setOnClickListener {
             val nome_usuario = campo_usuario.text.toString()
             val senha_usuario = campo_senha.text.toString()
+            val check_login = checkbox.isChecked
+
+            if (check_login) {
+                Prefs.setString("nomeusuario", nome_usuario)
+                Prefs.setString("senhausuario", senha_usuario)
+            } else {
+                Prefs.setString("nomeusuario", "")
+                Prefs.setString("senhausuario", "")
+            }
+            Prefs.setBoolean("checkusuario", check_login)
 
             val intent = Intent(this, TelaInicialActivity::class.java)
 
@@ -31,13 +46,6 @@ class MainActivity : DebugActivity() {
             } else {
                 Toast.makeText(this, "Usuário ou senha incorretos", Toast.LENGTH_LONG).show()
             }
-
-
-
-
-
-
-
         }
     }
 }

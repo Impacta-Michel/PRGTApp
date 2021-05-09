@@ -2,21 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.prgtapp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.type.watch" />
 
     <application
+        android:name=".PRGTApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PRGTApp">
-        <activity android:name=".DetalheProjeto" />
+        <activity android:name=".NewUserActivity"></activity>
+        <activity android:name=".UsuarioDetalheActivity" />
+        <activity android:name=".ProjetoDetalheActivity" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".NewProjectActivity" />
         <activity android:name=".ConfigActivity" />
         <activity android:name=".ProjectActivity" />
-        <activity android:name=".CrewActivity" />
+        <activity android:name=".EquipeActivity" />
         <activity android:name=".ProfileActivity" />
         <activity
             android:name=".TelaInicialActivity"
