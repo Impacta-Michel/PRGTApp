@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="62dp"
+            android:background="@drawable/white_border_rounded_cornwe">
+
+            <TextView
+                android:id="@+id/textoNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:maxLines="1"
+                android:paddingLeft="50dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:layout_width="18.7dp"
+                android:layout_height="18.3dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:src="@drawable/outline_email_black_36dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="62dp"
+            android:background="@drawable/white_border_rounded_cornwe">
+
+            <TextView
+                android:id="@+id/textoEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingLeft="50dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="14dp" />
+            <ImageView
+                android:layout_width="18.7dp"
+                android:layout_height="18.3dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:src="@drawable/outline_lock_black_36dp"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/botao_remover_usuario"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="62dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="remover" />
+    </LinearLayout>
+</RelativeLayout>
