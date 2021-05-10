@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.toolbar.*
 class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private val context: Context get() = this
-
+    private var usuario = Usuario()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,9 +28,9 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         supportActionBar?.title = "Menu do Usuário"
 
 
-        var params = intent.extras
-        val nome = params?.getString("nome")
-        Toast.makeText(this, "Seja bem vindo, $nome", Toast.LENGTH_LONG).show()
+ //       usuario = intent.getSerializableExtra("usuario") as Usuario
+
+//        Toast.makeText(this, "Seja bem vindo, ${usuario.nome}", Toast.LENGTH_LONG).show()
 
         button_profile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
