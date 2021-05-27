@@ -64,11 +64,20 @@ class UserActivity : AppCompatActivity() {
             this.usuarios = UsuarioService.getUsuarios(context)
             runOnUiThread{
                 recycler_usuarios?.adapter = UsuarioAdapter(this.usuarios){ onClickUsuario(it) }
+
+                enviaNotificacao(this.usuarios.get(0))
             }
         }.start()
     }
 
-//
+    fun enviaNotificacao(usuario: Usuario) {
+
+        val intent = Intent(this, UserActivity::class.java)
+
+        intent.putExtra("usuario", usuario)
+        NotificationUtil.create(this, 1, intent, "PRGTApp", "Você tem nova atividade no ${usuario.nome}")
+    }
+
 
     fun onClickUsuario(usuario: Usuario){
 //        Toast.makeText(context, "Clicou no usuário id: ${usuario.id}", Toast.LENGTH_SHORT).show()
@@ -84,4 +93,5 @@ class UserActivity : AppCompatActivity() {
             taskUsuario()
         }
     }
+
 }
