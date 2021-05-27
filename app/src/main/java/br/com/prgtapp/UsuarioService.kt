@@ -84,6 +84,12 @@ object UsuarioService {
 
     }
 
+    fun getById(id: Int) : Usuario {
+        val json = HttpHelper.get("$host/usuarios/$id")
+
+        return parserJson(json)
+    }
+
     inline fun <reified T> parserJson(json:String) : T {
         val type = object: TypeToken<T>(){}.type
         return Gson().fromJson<T>(json, type)

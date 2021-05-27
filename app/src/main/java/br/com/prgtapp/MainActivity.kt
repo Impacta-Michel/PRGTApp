@@ -3,6 +3,7 @@ package br.com.prgtapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.login.*
 
@@ -46,6 +47,22 @@ class MainActivity : DebugActivity() {
             } else {
                 Toast.makeText(this, "Usuário ou senha incorretos", Toast.LENGTH_LONG).show()
             }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        //progress_login.visibility = View.GONE
+        val usuarioID = intent.getStringExtra("usuarioID")
+        if (usuarioID != null) {
+            Thread {
+                val u = UsuarioService.getById(usuarioID!!.toInt())
+                runOnUiThread {
+                    val intentUser = Intent(this, UsuarioDetalheActivity::class.java)
+                    intentUser.putExtra("usuario", u)
+                    startActivity(intentUser)
+                }
+            }.start()
         }
     }
 }
